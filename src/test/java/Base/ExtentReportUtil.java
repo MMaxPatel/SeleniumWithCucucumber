@@ -17,7 +17,7 @@ import java.nio.file.Files;
 
 public class ExtentReportUtil extends BaseUtil {
 
-     fileName = reportLocation + "extentreport.html";
+     String fileName = reportLocation + "extentreport.html";
 
 
     public void ExtentReport() {
