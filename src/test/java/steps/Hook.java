@@ -21,9 +21,9 @@ public class Hook extends BaseUtil{
     @Before
     public void InitializeTest(Scenario scenario) {
 
-
+ System.out.println(scenario.getName()+ " 1ZZZZZZZZZZZZZZZZ" );
         scenarioDef = base.features.createNode(scenario.getName());
- System.out.println(scenario.getName()+ " ZZZZZZZZZZZZZZZZ" );
+
         System.out.println("Opening the browser : Firefox");
 
         /*System.setProperty("webdriver.firefox.marionette", "D:\\Libs\\geckodriver.exe");
@@ -38,6 +38,7 @@ public class Hook extends BaseUtil{
 
     @After
     public void TearDownTest(Scenario scenario) {
+         System.out.println(scenario.getName()+ "2 ZZZZZZZZZZZZZZZZ" );
         if (scenario.isFailed()) {
             //Take screenshot logic goes here
             System.out.println(scenario.getName());
