@@ -17,7 +17,7 @@ import java.nio.file.Files;
 
 public class ExtentReportUtil extends BaseUtil {
 
-    String fileName = reportLocation + "extentreport.html";
+     fileName = reportLocation + "extentreport.html";
 
 
     public void ExtentReport() {
@@ -35,8 +35,8 @@ public class ExtentReportUtil extends BaseUtil {
     }
 
     public void ExtentReportScreenshot() throws IOException {
-
-        String scr = ((TakesScreenshot)Driver).getScreenshotAs(OutputType.FILE);
+ArrayList<File> scr;
+         scr = ((TakesScreenshot)Driver).getScreenshotAs(OutputType.FILE);
         Files.copy(scr.toPath(), new File(reportLocation + "screenshot.png").toPath());
         scenarioDef.fail("details").addScreenCaptureFromPath(reportLocation + "screenshot.png");
     }
